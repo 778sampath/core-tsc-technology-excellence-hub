@@ -1,0 +1,207 @@
+Build a Core Platforms TSC internal microsite/portal that acts as a one-stop place for competencies, accelerators, demos, AI initiatives, success stories, metrics, and collaboration updates.
+Phase 1 — MVP by Mid-July
+1. Define access roles and permissions
+Create a simple access matrix with only 2–3 roles initially:
+Role	Access
+Administrator	Full site/content/admin control
+Core Platform TSC Back Office / Manager	Content update and review access
+General ValueMomentum User	View-only access
+Key point: accelerator demos, code, and sensitive IP should not be openly accessible outside ValueMomentum.
+2. Prepare a simple Excel planner
+Create an Excel tracker with:
+Area	Details
+Page/Module	AI, Competency, Accelerators, Success Stories, Dashboard
+Owner	Competency owner / TSC owner
+Dependency	Guidewire, CCM, OneShield, Earnix, etc.
+Status	Not Started / In Progress / Ready / Blocked
+Data Required	Metrics, demos, case studies, videos
+Target Date	MVP timeline
+Remarks	Risks or pending inputs
+3. Finalize MVP pages
+For MVP, focus on the most important pages:
+Executive Dashboard
+AI for Core Platforms
+Competency Overview
+Innovation Lab / Assets & Accelerators
+Success Stories
+Collaboration with Verticals / Other TSCs
+Marketplace / Partnerships
+4. Build AI for Core Platforms page
+Include only elevator-pitch level content:
+Core Platforms AI strategy
+3-phase AI roadmap
+Gen AI assisted approach
+AI-powered accelerators
+AI offerings
+Key demos/use cases
+Contact person for more details
+Avoid putting full collateral on the page.
+5. Build Innovation Lab / Assets & Accelerators page
+This should combine AI and non-AI accelerators.
+Recommended structure:
+Section	Content
+Accelerator Name	Name of the asset
+Objective	What it solves
+Value Proposition	Why it matters
+Outcome	Expected benefit/result
+Technology Used	Tools/platforms involved
+Demo Status	Demo-ready / Checklist / In progress
+Link	SharePoint/demo/video link
+Also classify accelerators clearly:
+Demo-ready coded accelerators
+Theoretical checklists/playbooks
+In-progress accelerators
+6. Add short demo videos
+For demo-ready accelerators, create short videos:
+Keep videos around 2–3 minutes
+Add subtitles where possible
+Use AI voice-over if needed
+Store videos in a controlled SharePoint/internal location
+Link videos from the portal
+7. Define competency page template
+Create one reusable template for competencies so that all areas follow a consistent structure.
+Suggested competency sections:
+Overview
+Platform coverage
+Maturity score
+Key capabilities
+Assets/accelerators
+Case studies
+Current initiatives
+Team/contact
+Marketplace/partnership links, if applicable
+Start with Earnix because it has less data and can be completed faster. Then move to Guidewire, CCM, and OneShield.
+8. Define platform maturity grid
+Use a 1–5 maturity score instead of percentages.
+Example:
+Platform	Maturity
+Guidewire	4
+OneShield	3.5
+Earnix	3
+Duck Creek	3
+9. Create success story template
+Each success story should have:
+Client/carrier anonymized name
+Business problem
+What ValueMomentum delivered
+Key outcomes
+Technologies/platforms involved
+Timeline/journey view
+Detailed case study link
+The purpose is to help internal teams quickly reuse relevant stories for proposals and client conversations.
+10. Add Core Platforms snapshot metrics
+Include a simple snapshot like:
+Team strength
+Competencies covered
+Number of accelerators
+Demo-ready accelerators
+Case studies
+Certifications
+Marketplace listings
+Active partnerships
+11. Use real data, not dummy data
+The MVP should be presentable to leadership, so use real information wherever possible.
+Target: reasonable MVP by mid-July, with a potential leadership walkthrough in the second or third week of July.
+Phase 2 — Content Maturity
+12. Assign content ownership by competency
+Web admins should not own all content.
+Each competency should manage its own content:
+Competency	Content Owner
+Guidewire	Guidewire competency team
+OneShield	OneShield team
+CCM	CCM team
+Earnix	Earnix team
+Duck Creek	Duck Creek team
+13. Improve consistency across content
+Standardize:
+Demo video format
+Subtitles
+Voice-over
+Page layout
+Accelerator descriptions
+Case study format
+Contact details
+Branding
+14. Add newsletter / notification model
+Evaluate how to notify users about updates.
+Options discussed:
+Monthly/quarterly newsletter
+“What’s New in Core Platforms” section
+Internal portal announcement
+Marketing calendar-based updates
+Pop-up/banner on ValueMomentum internal channels
+15. Add collaboration section
+Highlight cross-team initiatives:
+Collaboration with verticals
+Joint solutions with other TSCs
+Advanced analytics + Claims Center AI
+Earnix + Guidewire integrations
+AI initiatives across competencies
+Phase 3 — Hosting, Security, and Governance
+16. Decide hosting approach
+Preferred direction: host internally as a company-owned microsite/TSC Hub.
+Avoid exposing IP publicly unless approved.
+17. Engage IT / DevSecOps / ISG
+Required steps:
+Understand internal microsite hosting process
+Share source code if required
+Conduct security review
+Conduct vulnerability assessment
+Get budget approval if external assessment is needed
+Ensure the site is not exposing sensitive IP
+18. Baseline source code
+Use Git/source control.
+Actions:
+Create baseline version
+Commit incrementally
+Maintain version history
+Avoid uncontrolled local-only changes
+19. Use company branding from day one
+Follow ValueMomentum brand guidelines:
+Approved logo
+Approved color palette
+Approved fonts
+Approved imagery/backgrounds
+Brand toolkit as source of truth
+This reduces rework during leadership/security/brand reviews.
+20. Make the site mobile-friendly
+The portal should work well on:
+Laptop
+Tablet/iPad
+Mobile
+This is important for sales booths, conferences, and executive walkthroughs.
+Leadership Presentation Preparation
+21. Prepare one approach summary slide
+For leadership walkthrough, prepare a slide covering:
+Why this portal is being built
+How it consolidates Core Platform capabilities
+How brand guidelines are followed
+How security/IP protection is considered
+How AI helped accelerate development
+What is ready in MVP
+What is planned next
+22. Prepare demo storyline
+Suggested storyline:
+Core Platforms needs a single source of truth.
+Today, information is scattered across folders, PPTs, and people.
+The portal will simplify discovery of competencies, accelerators, demos, and success stories.
+It will support onboarding, proposals, conferences, and leadership visibility.
+MVP will start with selected pages and real data.
+More competencies and richer content will be added phase-wise.
+Immediate To-Do List
+Create Excel planner.
+Define roles and permissions.
+Finalize MVP page list.
+Create reusable competency template.
+Start with Earnix competency page.
+Build AI for Core Platforms page.
+Build Innovation Lab / Accelerator summary page.
+Define success story template.
+Collect real metrics and accelerator data.
+Create short demo/video plan.
+Align with competency leaders.
+Confirm hosting/security process with IT/ISG.
+Apply ValueMomentum branding.
+Baseline code in Git.
+Prepare leadership summary slide.
+Target MVP readiness by mid-July.

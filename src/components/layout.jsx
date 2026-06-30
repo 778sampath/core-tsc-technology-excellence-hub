@@ -3,13 +3,13 @@ import { Link, useLocation } from "wouter";
 import { 
   LayoutDashboard, 
   Layers, 
-  Box, 
   Lightbulb, 
-  FlaskConical, 
   PlaySquare, 
   Trophy, 
-  Settings, 
-  Menu, 
+  BotMessageSquare,
+  Handshake,
+  Globe,
+  Users,
   Search, 
   Bell, 
   Moon, 
@@ -26,14 +26,15 @@ const LogoLight = "/assets/logo-light.png";
 const IconMark = "/assets/favicon-mark.png";
 
 const NAV_ITEMS = [
-  { path: "/", label: "Executive Dashboard", icon: LayoutDashboard },
-  { path: "/competencies", label: "Competency Center", icon: Layers },
-  { path: "/assets", label: "Assets & Accelerators", icon: Box },
-  { path: "/innovation", label: "Innovation Lab", icon: Lightbulb },
-  { path: "/poc-showcase", label: "POC Showcase", icon: FlaskConical },
-  { path: "/demo-center", label: "Demo Center", icon: PlaySquare },
-  { path: "/success-stories", label: "Success Stories", icon: Trophy },
-  { path: "/settings", label: "Settings", icon: Settings },
+  { path: "/",                label: "Executive Dashboard",      icon: LayoutDashboard },
+  { path: null,               label: "AI for Core Platforms",    icon: BotMessageSquare },
+  { path: "/competencies",    label: "Competency Center",        icon: Layers },
+  { path: "/innovation",      label: "Innovation Lab",           icon: Lightbulb },
+  { path: "/demo-center",     label: "Demo Center",              icon: PlaySquare },
+  { path: "/success-stories", label: "Success Stories",          icon: Trophy },
+  { path: null,               label: "Partnerships & Marketplace", icon: Handshake },
+  { path: null,               label: "Collaboration Hub",        icon: Globe },
+  { path: null,               label: "Team & Capability",        icon: Users },
 ];
 
 export function Layout({ children }) {
@@ -63,26 +64,39 @@ export function Layout({ children }) {
         <nav className="flex-1 overflow-y-auto py-4 space-y-1 px-3">
           {NAV_ITEMS.map((item) => {
             const isActive = location === item.path;
+            const isDisabled = item.path === null;
             const Icon = item.icon;
-            
-            return (
-              <Link key={item.path} href={item.path} className="block">
-                <div
-                  className={`flex items-center ${
-                    isCollapsed ? "justify-center px-0" : "px-3"
-                  } py-2.5 rounded-md transition-colors cursor-pointer group ${
-                    isActive 
-                      ? "bg-[#056BFC] text-white" 
-                      : "text-gray-300 hover:bg-[#383838] hover:text-white"
+
+            const inner = (
+              <div
+                className={`flex items-center ${
+                  isCollapsed ? "justify-center px-0" : "px-3"
+                } py-2.5 rounded-md transition-colors group ${
+                  isDisabled
+                    ? "opacity-40 cursor-not-allowed"
+                    : isActive
+                    ? "bg-[#056BFC] text-white cursor-pointer"
+                    : "text-gray-300 hover:bg-[#383838] hover:text-white cursor-pointer"
+                }`}
+              >
+                <Icon
+                  className={`h-5 w-5 flex-shrink-0 ${
+                    isActive ? "text-white" : "text-gray-300 group-hover:text-white"
                   }`}
-                >
-                  <Icon className={`h-5 w-5 ${isActive ? "text-white" : "text-gray-300 group-hover:text-white"} flex-shrink-0`} />
-                  {!isCollapsed && (
-                    <span className="ml-3 text-sm font-medium whitespace-nowrap">
-                      {item.label}
-                    </span>
-                  )}
-                </div>
+                />
+                {!isCollapsed && (
+                  <span className="ml-3 text-sm font-medium whitespace-nowrap">
+                    {item.label}
+                  </span>
+                )}
+              </div>
+            );
+
+            return isDisabled ? (
+              <div key={item.label}>{inner}</div>
+            ) : (
+              <Link key={item.path} href={item.path} className="block">
+                {inner}
               </Link>
             );
           })}
